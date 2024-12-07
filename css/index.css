@@ -152,7 +152,6 @@ ul li a:hover:before {
         margin-top:20px ;
     }
 
-    /* When active class is added, display the nav-bar */
     .nav-bar.active {
         display: block;
     }
@@ -216,7 +215,7 @@ ul li a:hover:before {
 }
 
 .glow-on-hover:before {
-    content: '';
+    content: ''; 
     background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
     position: absolute;
     top: -2px;
@@ -274,41 +273,19 @@ ul li a:hover:before {
     position: relative;
 }
 .my-img img {
-    height: 300px;
-    width: 300px;
+    height: 280px;
+    width: 280px;
     object-fit: cover;
     border-radius: 50%;
     transition: 1s;
+    object-position: right;
+
 
 }
-.my-img::before,.my-img::after{
-    content: '';
-    position: absolute;
-    border-radius: 50%;
-    left: -2px;
-    top: -4px;
-    background:linear-gradient(45deg,#e6fb04,#ff6600,#00ff66,#00ffff,#ff00ff,#ff0099,#6e0dd0,#ff3300,#099fff);
-    background-size: 400%;
-    width: calc(100% + 5px);
-    height: calc(100% + 5px);
-    z-index: -1;
-    animation: animate 20s linear infinite;
-}
-@keyframes animate {
-    0%{
-        background-position: 0 0;
-    }
-    50%{
-        background-position: 400% 0 ;
-    }
-    100%{
-        background-position: 0 0;
-    }
-}
-.my-img::after{
-    filter: blur(40px);
-}
 
+.my-img img{
+    box-shadow: 0px 2px 5px whitesmoke;
+}
 
 .heading {
     color: #ff6820;
@@ -333,7 +310,7 @@ ul li a:hover:before {
 }
 
 .skills-box {
-    /* width: 100%; */
+   
 
     display: flex;
     justify-content: center;
@@ -344,16 +321,19 @@ ul li a:hover:before {
 
 }
 @media (max-width:650px) {
-    .skills-box{
-       
-    }
+
     .skill-childs1{
+        width: 80%;
         flex-direction: column;
+        gap: 40px;
     }
     .skill-childs2{
         flex-direction: column;
+        width: 80%;
+        gap: 40px;
     }
 }
+
 .skills-box h1{
     color: #ff6820;
     font-family: monospace;
@@ -424,6 +404,18 @@ ul li a:hover:before {
         width: 100%;
         text-align: center;
     }
+    .box{
+        width: 90%;
+        height: 200px;
+        margin: 20px;
+    }
+    .box img{
+        height: 75%;
+        width: 50%;
+    }
+    .skills-box{
+        gap: 40px;
+    }
 
 }
 .form{
@@ -471,8 +463,8 @@ ul li a:hover:before {
     .contact-box p{
         font-size: 17px;
         letter-spacing: 1.5px;
-        width: 50%;
-        text-align: center;
+       width: 80%;
+        text-align: justify;
     }
 }
 
@@ -569,7 +561,7 @@ ul li a:hover:before {
     transform: scale(1.1);
 }
 .card img{
-    height: 100px;
+    height: 120px;
     width: 90%;
     object-fit: cover;
     border-radius: 5px;
@@ -605,13 +597,21 @@ ul li a:hover:before {
     .card-a{
         flex-direction: column;
         margin: 10px 0;
+        width: 90%;
+        align-items: center;
        
     }
     .card-b{
         
         flex-direction: column;
         margin: 10px 0;
+        align-items: center;
+        width: 90%;
        
+    }
+    .card{
+        height: 350px;
+        width: 90%;
     }
 }
 .card-b{
@@ -622,7 +622,7 @@ ul li a:hover:before {
 .footer{
     border: 1px solid white;
     width: 100%;
-    padding: 10px;
+    
     display: flex;
 }
 .detail{
@@ -634,7 +634,7 @@ ul li a:hover:before {
     font-family: cursive;
     font-size: 15px;
     text-align: start;
-    gap: 20px;
+    gap: 7px;
     border-right: 1px solid white;
 }
 
@@ -666,7 +666,7 @@ ul li a:hover:before {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 30px;
+    gap: 9px;
     font-size: 25px;
 
 }
