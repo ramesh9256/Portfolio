@@ -167,12 +167,14 @@
                     Send me a message!
                 </h4>
                 <p>Got a question or want to collab with a project, or just want to say hello? Go ahead.</p>
-                <form action="" class="form">
-                    <input type="text" placeholder="Your name" required>
-                    <input type="email" placeholder="Your email" required>
-                    <textarea name="" id="" placeholder="Enter your message" required cols="25" rows="6"></textarea>
+                <form action="https://api.web3forms.com/submit" method="POST" class="form">
+                    <input type="hidden" name="access_key" value="d79ee2b8-ec2e-4bd5-a78c-79dbda8a3422">
+                    <input type="text" name="name" placeholder="Your name" required>
+                    <input type="email" name="email" placeholder="Your email" required>
+                    <textarea name="message" id="" placeholder="Enter your message" required cols="25" rows="6"></textarea>
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
-                    <button class="glow-on-hover">Send</button>
+                    <button class="glow-on-hover" type="submit">Send</button>
                 </form>
 
             </div>
@@ -205,7 +207,6 @@
                     <p>&copy</p>
                     <p class="p"> All Right Reserved <span class="span"><a href="#home">Ramesh kumar</a></span></p>
                 </div>
-
             </div>
     </footer>
 
